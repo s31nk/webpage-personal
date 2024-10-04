@@ -1,0 +1,33 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Actualmente...",
+    title: "Front End Developer en Teide-Hease",
+    description:
+      "En esta titulación aprendí todo lo necesario acerca del desarrollo web y la implementacion de paginas web con diversos frameworks y lenguajes de programación.",
+  },
+  {
+    date: "2021-Actualidad",
+    title: "Prducción de Eventos en TAD Producciones",
+    description:
+      "Mi trabajo consiste en la producción de eventos, desde la creación de la idea hasta la ejecución del evento.",
+  },
+  {
+    date: "2018-2021",
+    title: "Bartender y Encargado de Ocio Nocturno",
+    description:"En esta etapa de mi vida, aprendí a trabajar en equipo, a gestionar situaciones de estrés y a tratar con todo tipo de personas.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
